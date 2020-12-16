@@ -1,0 +1,155 @@
+$color_back: black;
+
+$color_3: tomato;
+
+$color_titulo: white;
+$tamano_titulo: 8vw;
+
+$color_player: white;
+$tamano_player: 5vw;
+
+$tamano_texto: 21px;
+$color_texto: white;
+$color_selected: #ff0000;
+
+$padding_main: 20px;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+
+body {
+    height: 100%;
+    margin: 0;
+    background: $color_back;
+}
+
+p {
+    margin: 0;
+}
+
+#container {
+    font-family: 'Nunito Sans', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header header header header header header"
+        "menu main main main main main";
+}
+
+.info {
+    grid-area: header;
+}
+
+.titulo,
+.player,
+.inicio {
+    margin: 0px;
+    padding: $padding_main;
+}
+
+.inicio {
+    display: grid;
+    grid-template-columns: auto;
+    @media (min-width: 600px) {
+        grid-template-columns: auto auto;
+    }
+}
+
+.texto_inicio {
+    color: $color_texto;
+    font-size: 50px;
+}
+
+.titulo {
+    color: $color_titulo;
+    font-size: 60px;
+    @media (min-width: 600px) {
+        font-size:80px;
+    }
+}
+
+.player {
+    color: $color_player;
+    font-size: 30px;
+    @media (min-width: 600px) {
+        font-size: 45px;
+    }
+}
+
+.menu {
+    grid-area: menu;
+    font-size: 21px;
+    @media (min-width: 600px) {
+        font-size: 45px;
+    }
+}
+
+.contenido {
+    grid-area: main;
+    text-align: justify;
+    margin: 0px;
+    padding: $padding_main;
+}
+
+.select_color {
+    color: $color_selected;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    padding: $padding_main;
+}
+
+a {
+    color: white;
+}
+
+#si_no {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 60px;
+}
+
+.botones_linea {
+    overflow:hidden;
+}
+
+.m_cuad {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    margin: 6px;
+}
+
+.m_cuad_nrmal {
+    background-color: white;
+}
+
+.m_cuad_selected {
+    background-color: red;
+}
+
+.inactive_si_no{
+    background-color:white;
+    color: black;
+}
+
+.active_si_no{
+    background-color:red;
+    color: white;
+}
+
+.sliders {
+    width: 60%;
+}
